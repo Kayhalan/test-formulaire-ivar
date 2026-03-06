@@ -104,11 +104,11 @@
         par e-mail pour analyse.
       </p>
 
-      <form id="feedback-form" action="https://formsubmit.co/" method="POST">
+      <form action="https://formsubmit.co/ani.sargsyan@ivar-fr.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvel avis client depuis GitHub Pages" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
-        <input id="next-url" type="hidden" name="_next" value="" />
+        <input type="hidden" name="_next" value="./merci.html" />
 
         <fieldset>
           <legend>Questions liminaires</legend>
@@ -163,15 +163,5 @@
         <button type="submit">Envoyer mon avis</button>
       </form>
     </main>
-    <script>
-      const form = document.getElementById("feedback-form");
-      const nextUrl = document.getElementById("next-url");
-      const emailUser = "ani.sargsyan";
-      const emailDomain = "ivar-fr.com";
-      const currentPath = window.location.pathname.replace(/[^/]*$/, "");
-
-      form.action = `https://formsubmit.co/${emailUser}@${emailDomain}`;
-      nextUrl.value = `${window.location.origin}${currentPath}merci.html`;
-    </script>
   </body>
 </html>
