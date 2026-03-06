@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire de satisfaction client</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        background: #f7f9fc;
+        color: #1f2937;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 2rem auto;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      fieldset {
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        padding: 1rem;
+      }
+
+      legend {
+        font-weight: 700;
+      }
+
+      .field {
+        margin-bottom: 1rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-weight: 600;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        width: 100%;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 0.65rem;
+        font: inherit;
+        box-sizing: border-box;
+      }
+
+      .inline-options {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .inline-options label {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-weight: 400;
+      }
+
+      .inline-options input {
+        width: auto;
+      }
+
+      button {
+        background: #2563eb;
+        color: #ffffff;
+        border: 0;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Questionnaire de satisfaction client</h1>
+      <p>
+        Merci de partager votre expérience. Les réponses seront envoyées à l'équipe
+        par e-mail pour analyse.
+      </p>
+
+      <form action="https://formsubmit.co/ani.sargsyan@ivar-fr.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvel avis client depuis GitHub Pages" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="./merci.html" />
+
+        <fieldset>
+          <legend>Questions liminaires</legend>
+          <div class="field">
+            <label for="client-name">Nom et prénom *</label>
+            <input id="client-name" name="Nom et prénom" type="text" required />
+          </div>
+          <div class="field">
+            <label for="client-email">Adresse e-mail *</label>
+            <input id="client-email" name="Email" type="email" required />
+          </div>
+          <div class="field">
+            <label for="client-company">Entreprise</label>
+            <input id="client-company" name="Entreprise" type="text" />
+          </div>
+          <div class="field">
+            <label for="contact-date">Date du dernier échange</label>
+            <input id="contact-date" name="Date du dernier échange" type="date" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Votre avis</legend>
+          <div class="field">
+            <label for="satisfaction">Niveau de satisfaction global *</label>
+            <select id="satisfaction" name="Satisfaction globale" required>
+              <option value="" selected disabled>Choisir une note</option>
+              <option value="5 - Très satisfait">5 - Très satisfait</option>
+              <option value="4 - Satisfait">4 - Satisfait</option>
+              <option value="3 - Neutre">3 - Neutre</option>
+              <option value="2 - Peu satisfait">2 - Peu satisfait</option>
+              <option value="1 - Insatisfait">1 - Insatisfait</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Recommanderiez-vous nos services ? *</label>
+            <div class="inline-options">
+              <label><input type="radio" name="Recommandation" value="Oui" required /> Oui</label>
+              <label><input type="radio" name="Recommandation" value="Non" required /> Non</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="commentaires">Commentaire principal *</label>
+            <textarea id="commentaires" name="Commentaire" rows="5" required></textarea>
+          </div>
+          <div class="field">
+            <label for="improvements">Points d'amélioration souhaités</label>
+            <textarea id="improvements" name="Améliorations souhaitées" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Envoyer mon avis</button>
+      </form>
+    </main>
+  </body>
+</html>
